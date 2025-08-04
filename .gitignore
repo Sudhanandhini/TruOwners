@@ -1,0 +1,67 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Dependency directories
+bower_components/
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.sublime*
+
+# Test coverage
+coverage/
+
+# Misc
+*.tgz
+*.zip
+*.bak
+*.tmp
+
+# React Native (if applicable)
+ios/
+android/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Parcel cache
+.cache/
+
+# Next.js
+.next/
+out/
+
+# SvelteKit
+.svelte-kit/
+
+# Storybook build
+storybook-static/
+
+# TypeScript
+*.tsbuildinfo
