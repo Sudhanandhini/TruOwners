@@ -19,7 +19,7 @@ const Footer = () => {
             <h3 className="footer-title">Useful Links</h3>
             <ul className="footer-links">
               <li><a href="/about">About Us</a></li>
-              <li><a href="/terms">Terms and Conditions</a></li>
+              <li><a href="/termcondition">Terms and Conditions</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
               <li><a href="/refund">Return and Refund Policy</a></li>
               <li><a href="/help">Help Center</a></li>

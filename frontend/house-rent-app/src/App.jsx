@@ -12,6 +12,13 @@ import PropertyDetailsPage from './components/pages/Property/PropertyDetailsPage
 import WishlistPage from './components/pages/Wishlist/WishlistPage'
 import './styles/globals.css'
 import './styles/components.css'
+import ContactPage from './components/pages/other/ContactPage'
+import AboutPage from './components/pages/other/AboutPage'
+import TermsAndConditions from './components/pages/other/TermConditionPage'
+import PrivacyPolicy from './components/pages/other/PrivacyPolicyPage'
+
+
+
 
 function AppContent() {
   const { user, isAuthenticated } = useAuth()
@@ -32,6 +39,8 @@ function AppContent() {
     <Layout>
       <ErrorBoundary>
         <HomePage />
+       
+
       </ErrorBoundary>
     </Layout>
   )
@@ -46,6 +55,56 @@ function App() {
             <Routes>
               {/* Regular App Route */}
               <Route path="/" element={<AppContent />} />
+
+              <Route
+                path="/contact"
+                element={
+                  <Layout>
+                    <ErrorBoundary>
+                      <ContactPage />
+                    </ErrorBoundary>
+                  </Layout>
+                }
+              />
+
+              <Route
+                path="/privacy"
+                element={
+                  <Layout>
+                    <ErrorBoundary>
+                      <PrivacyPolicy />
+                    </ErrorBoundary>
+                  </Layout>
+                }
+              />
+
+
+
+
+
+
+
+               <Route
+                path="/termcondition"
+                element={
+                  <Layout>
+                    <ErrorBoundary>
+                      <TermsAndConditions />
+                    </ErrorBoundary>
+                  </Layout>
+                }
+              />
+
+              <Route
+                path="/about"
+                element={
+                  <Layout>
+                    <ErrorBoundary>
+                      <AboutPage />
+                    </ErrorBoundary>
+                  </Layout>
+                }
+              />
 
               {/* Property Details Route - Wrapped with Layout */}
               <Route

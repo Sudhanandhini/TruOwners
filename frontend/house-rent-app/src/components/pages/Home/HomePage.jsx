@@ -9,8 +9,84 @@ import Login from '../Auth/Login'
 import Register from '../Auth/SignUp'
 import PropertyDetailsModal from './PropertyDetailsModal'
 import './HomePage.css'
+import CountUp from 'react-countup';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
+
+const stats = [
+  {
+    value: 130,
+    suffix: ' cr+',
+    description: 'Brokerage saved monthly',
+    prefix: '₹',
+  },
+  {
+    value: 30,
+    suffix: ' Lakh+',
+    description: 'Customers Connected Monthly',
+  },
+  {
+    value: 2,
+    suffix: ' Lakh+',
+    description: 'New Listings Monthly',
+  },
+];
+
+
+const testimonials = [
+  {
+    name: 'John Doe',
+    role: 'CEO, ABC Corp',
+    text: 'This product has truly transformed our business. Highly recommended!',
+    image: 'https://randomuser.me/api/portraits/men/1.jpg',
+  },
+  {
+    name: 'Jane Smith',
+    role: 'Marketing Head, XYZ Ltd',
+    text: 'Excellent service, great support. It was a pleasure working with the team.',
+    image: 'https://randomuser.me/api/portraits/women/1.jpg',
+  },
+  {
+    name: 'Ravi Kumar',
+    role: 'Founder, StartTech',
+    text: 'Professional and efficient. We are seeing great results already!',
+    image: 'https://randomuser.me/api/portraits/men/2.jpg',
+  },
+  {
+    name: 'Priya Patel',
+    role: 'CTO, TechZen',
+    text: 'Great team, fast delivery, and superb support!',
+    image: 'https://randomuser.me/api/portraits/women/2.jpg',
+  },
+  {
+    name: 'Amit Verma',
+    role: 'Co-Founder, MarketHub',
+    text: 'Exactly what we needed. Highly professional!',
+    image: 'https://randomuser.me/api/portraits/men/3.jpg',
+  },
+];
+
+
+
+const destinations = [
+  { name: 'New Cairo', image: '/src/assets/images/homebanner.jpg' },
+  { name: 'El Sheikh Zayed', image: '/src/assets/images/download.webp' },
+  { name: '6th of October', image: '/src/assets/images/download1.webp' },
+  { name: 'El Gouna', image: '/src/assets/images/download2.webp' },
+  { name: 'North Coast', image: '/src/assets/images/download.webp' },
+  { name: 'Ras El Hekma', image: '/src/assets/images/download1.webp' },
+  { name: 'El Gouna', image: '/src/assets/images/download2.webp' },
+  { name: 'North Coast', image: '/src/assets/images/download.webp' },
+  { name: 'Ras El Hekma', image: '/src/assets/images/download1.webp' },
+];
+
 
 const HomePage = () => {
+  const [showAll, setShowAll] = useState(false);
   const [properties, setProperties] = useState([])
   const [filteredProperties, setFilteredProperties] = useState([])
   const [loading, setLoading] = useState(true)
@@ -286,6 +362,12 @@ const HomePage = () => {
           <div className="hero-section">
             <div className="hero-content">
               <h1 className="hero-title">Find Your Perfect Rental Home</h1>
+              <div>
+              <h1 className="main-heading">
+          <span className="highlight">No</span> Brokers |{" "}
+          <span className="highlight">No</span> Commissions
+        </h1></div>
+
               <div className="hero-bottom-content">
                 <p className="hero-subtitle">
                   Discover amazing properties from verified owners across the city
@@ -298,6 +380,37 @@ const HomePage = () => {
               </div>
             </div>
           </div>
+
+
+
+          <div className='container section1'>
+
+
+            {/* ✅ New Section: Top Destinations */}
+            <section className="top-destinations">
+              <div className="header1">
+                <h3>Top Destinations:</h3>
+                <button className="toggle-btn" onClick={() => setShowAll(!showAll)}>
+                  {showAll ? 'Show Less' : 'Show All'}
+                </button>
+              </div>
+              <div className="cards-container">
+                {destinations.slice(0, showAll ? destinations.length : 6).map((item, index) => (
+                  <div
+                    className="destination-card"
+                    key={index}
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  >
+                    <span className="label">{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
+
+
+
+
           {/* Filters Section */}
           <PropertyFilters
             filters={filters}
@@ -362,6 +475,96 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+
+
+         <div className="counter-container">
+        <h2 className="counter-title">We Make A Difference</h2>
+        <div className="counter-grid">
+          {stats.map((item, index) => (
+            <div className="counter-box" key={index}>
+              <div className="counter-circle">
+                <CountUp
+                  start={0}
+                  end={item.value}
+                  duration={2}
+                  prefix={item.prefix || ''}
+                  suffix={item.suffix || ''}
+                />
+              </div>
+              <p className="counter-description">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+{/* Testimonial Section */}
+      <div className="testimonial-slider-container" style={{ padding: '40px 0', maxWidth: '1200px', margin: '0 auto' }}>
+        <h2 className="slider-title" style={{ textAlign: 'center', marginBottom: '40px', fontSize: '2rem' }}>
+          What Our Clients Say
+        </h2>
+
+        <Swiper
+          modules={[Autoplay, Pagination, Navigation]}
+          spaceBetween={30}
+          slidesPerView={1} // Start with 1 on mobile
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          
+          loop={true}
+          breakpoints={{
+            640: { slidesPerView: 2 }, // 2 slides on tablets
+            1024: { slidesPerView: 3 } // 3 slides on desktop
+          }}
+          style={{ padding: '20px' }}
+        >
+          {testimonials.map((testimonial, index) => (
+            <SwiperSlide key={index} style={{ height: 'auto' }}>
+              <div style={{
+                background: ' #f5f4f4ff',
+                borderRadius: '10px',
+                
+                padding: '30px',
+                boxShadow: '0 5px 15px rgba(0,0,0,0.1)',
+                height: '250px',
+                display: 'flex',
+                flexDirection: 'column'
+              }}>
+                <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '20px', flexGrow: 1 }}>
+                  "{testimonial.text}"
+                </p>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    style={{
+                      width: '50px',
+                      height: '50px',
+                      borderRadius: '50%',
+                      objectFit: 'cover',
+                      marginRight: '15px'
+                    }}
+                  />
+                  <div>
+                    <h4 style={{ margin: '0', fontSize: '1.1rem' }}>{testimonial.name}</h4>
+                    <p style={{ margin: '5px 0 0', fontSize: '0.9rem', color: '#666' }}>
+                      {testimonial.role}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      
+
+
+
+
+
+
 
       {/* Modals */}
       {showAuthPrompt && (
