@@ -317,12 +317,12 @@ const Header = () => {
                     Sign Up
                   </button>
                   <button
-                    className="btn btn-primary btn-mobile"
+                    className="btn color-change1 btn-mobile"
                     onClick={handleLoginClick}
                   >
                     Login
                   </button>
-                  <button className="btn btn-accent btn-mobile" onClick={handleOwnerSignUpClick}>
+                  <button className="btn color-change btn-mobile" onClick={handleOwnerSignUpClick}>
                     For Property Owners
                   </button>
                 </>

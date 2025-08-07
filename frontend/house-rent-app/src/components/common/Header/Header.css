@@ -29,7 +29,7 @@
 .header-logo .app-name {
   font-size: var(--font-size-2xl);
   font-weight: 700;
-  color: var(--primary-color);
+  color:  #D0021B;
   letter-spacing: -0.025em;
   margin: 0;
   cursor: pointer;
@@ -447,4 +447,13 @@
     width: 100%;
     justify-content: center;
   }
+}
+
+
+.color-change{
+  background-color: #4F4F4F ;
+}
+
+.color-change1{
+  background-color: #333333;
 }

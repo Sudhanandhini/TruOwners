@@ -540,9 +540,9 @@
   
   .auth-close {
     position: relative;
-    right: 0;
-    top: 0;
+    top: 26px;
     width: 40px;
+    right: -19px;
     height: 40px;
     border-radius: 50%;
     background: var(--gray-100);

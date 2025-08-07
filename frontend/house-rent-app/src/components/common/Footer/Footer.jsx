@@ -1,5 +1,7 @@
 import React from 'react'
 import './Footer.css'
+import { FaFacebookF, FaYoutube, FaWhatsapp, FaInstagram } from 'react-icons/fa'
+
 
 const Footer = () => {
   return (
@@ -21,7 +23,7 @@ const Footer = () => {
               <li><a href="/about">About Us</a></li>
               <li><a href="/termcondition">Terms and Conditions</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/refund">Return and Refund Policy</a></li>
+              <li><a href="/faq">FAQ</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
@@ -43,15 +45,32 @@ const Footer = () => {
                 <p>123 Property Street, City, State 12345</p>
               </div>
             </div>
-            
+
             {/* Social Media Links */}
-            <div className="footer-social">
+            {/* <div className="footer-social">
               <h4>Follow Us</h4>
               <div className="social-links">
                 <a href="#" className="social-link">📘</a>
                 <a href="#" className="social-link">📷</a>
                 <a href="#" className="social-link">🐦</a>
                 <a href="#" className="social-link">💼</a>
+              </div>
+            </div> */}
+            <div className="footer-social">
+              <h4>Follow Us</h4>
+              <div className="social-links">
+                <a href="https://facebook.com" className="social-link" target="_blank" rel="noopener noreferrer">
+                  <FaFacebookF />
+                </a>
+                <a href="https://youtube.com" className="social-link" target="_blank" rel="noopener noreferrer">
+                  <FaYoutube />
+                </a>
+                <a href="https://wa.me/your-number" className="social-link" target="_blank" rel="noopener noreferrer">
+                  <FaWhatsapp />
+                </a>
+                <a href="https://instagram.com" className="social-link" target="_blank" rel="noopener noreferrer">
+                  <FaInstagram />
+                </a>
               </div>
             </div>
           </div>
@@ -62,9 +81,7 @@ const Footer = () => {
           <div className="footer-bottom-content">
             <p>&copy; 2024 Truowners. All rights reserved.</p>
             <div className="footer-bottom-links">
-              <a href="/privacy">Privacy</a>
-              <a href="/terms">Terms</a>
-              <a href="/cookies">Cookies</a>
+              <p>Developed by <a href="https://www.italliance.tech" style={{ color: '#fff' }} >IT Alliance</a> </p>
             </div>
           </div>
         </div>

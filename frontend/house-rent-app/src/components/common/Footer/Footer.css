@@ -1,5 +1,5 @@
 .footer {
-    background-color: var(--gray-900);
+    background-color: #333333;
     color: var(--white);
     padding: var(--spacing-12) 0 var(--spacing-4) 0;
     margin-top: auto;
@@ -22,15 +22,16 @@
   .footer-logo .footer-brand {
     font-size: var(--font-size-2xl);
     font-weight: 700;
-    color: var(--primary-color);
+    color:  #D0021B;
     margin-bottom: var(--spacing-2);
     letter-spacing: -0.025em;
   }
   
   .footer-tagline {
-    color: var(--gray-400);
+    color: #fff;
     font-size: var(--font-size-sm);
     margin: 0;
+      font-family: 'Raleway', sans-serif !important;
   }
   
   /* Footer Center */
@@ -57,7 +58,7 @@
   }
   
   .footer-links a {
-    color: var(--gray-400);
+    color: #fff;
     font-size: var(--font-size-sm);
     transition: color 0.2s ease;
     text-decoration: none;
@@ -91,7 +92,7 @@
   }
   
   .footer-contact-item p {
-    color: var(--gray-400);
+    color: #fff;
     font-size: var(--font-size-sm);
     margin: 0;
     line-height: 1.5;
@@ -143,7 +144,7 @@
   }
   
   .footer-bottom p {
-    color: var(--gray-400);
+    color: #fff;
     font-size: var(--font-size-sm);
     margin: 0;
   }

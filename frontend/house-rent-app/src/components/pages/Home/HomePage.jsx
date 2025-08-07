@@ -74,14 +74,14 @@ const testimonials = [
 
 const destinations = [
   { name: 'New Cairo', image: '/src/assets/images/homebanner.jpg' },
-  { name: 'El Sheikh Zayed', image: '/src/assets/images/download.webp' },
-  { name: '6th of October', image: '/src/assets/images/download1.webp' },
-  { name: 'El Gouna', image: '/src/assets/images/download2.webp' },
-  { name: 'North Coast', image: '/src/assets/images/download.webp' },
-  { name: 'Ras El Hekma', image: '/src/assets/images/download1.webp' },
-  { name: 'El Gouna', image: '/src/assets/images/download2.webp' },
-  { name: 'North Coast', image: '/src/assets/images/download.webp' },
-  { name: 'Ras El Hekma', image: '/src/assets/images/download1.webp' },
+  { name: 'El Sheikh Zayed', image: '/src/assets/images/homebanner.jpg' },
+  { name: '6th of October', image: '/src/assets/images/homebanner.jpg' },
+  { name: 'El Gouna', image: '/src/assets/images/homebanner.jpg' },
+  { name: 'North Coast', image: '/src/assets/images/homebanner.jpg' },
+  { name: 'Ras El Hekma', image: '/src/assets/images/homebanner.jpg' },
+  { name: 'El Gouna', image: '/src/assets/images/homebanner.jpg' },
+  { name: 'North Coast', image: '/src/assets/images/homebanner.jpg' },
+  { name: 'Ras El Hekma', image: '/src/assets/images/homebanner.jpg' },
 ];
 
 

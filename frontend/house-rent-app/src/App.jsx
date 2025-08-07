@@ -16,6 +16,7 @@ import ContactPage from './components/pages/other/ContactPage'
 import AboutPage from './components/pages/other/AboutPage'
 import TermsAndConditions from './components/pages/other/TermConditionPage'
 import PrivacyPolicy from './components/pages/other/PrivacyPolicyPage'
+import FaqPage from './components/pages/other/FaqPage'
 
 
 
@@ -79,7 +80,16 @@ function App() {
               />
 
 
-
+ <Route
+                path="/faq"
+                element={
+                  <Layout>
+                    <ErrorBoundary>
+                      <FaqPage />
+                    </ErrorBoundary>
+                  </Layout>
+                }
+              />
 
 
 
@@ -128,6 +138,8 @@ function App() {
                   </Layout>
                 }
               />
+
+               
 
 
               {/* Hidden Admin Access Routes */}
